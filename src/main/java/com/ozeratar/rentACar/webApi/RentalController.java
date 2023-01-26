@@ -30,8 +30,8 @@ public class RentalController {
 	}
 	
 	@GetMapping("/{id}")
-	public GetRentalResponse getById(GetRentalResponse getRentalResponse) {
-		return rentalService.getById(getRentalResponse);
+	public GetRentalResponse getById(int id) {
+		return rentalService.getById(id);
 	}
 	
 	@PostMapping

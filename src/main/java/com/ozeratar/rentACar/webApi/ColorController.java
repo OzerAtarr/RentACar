@@ -2,6 +2,8 @@ package com.ozeratar.rentACar.webApi;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,12 +40,12 @@ public class ColorController {
 	}
 	
 	@PostMapping
-	public CreateColorResponse add(@RequestBody CreateColorRequest createColorRequest) {
+	public CreateColorResponse add(@Valid @RequestBody CreateColorRequest createColorRequest) {
 		return colorService.add(createColorRequest);
 	}
 	
 	@PutMapping
-	public UpdateColorResponse update(@RequestBody UpdateColorRequest updateColorRequest) {
+	public UpdateColorResponse update(@Valid @RequestBody UpdateColorRequest updateColorRequest) {
 		return colorService.update(updateColorRequest);
 	}
 	

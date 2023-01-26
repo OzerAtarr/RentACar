@@ -2,6 +2,8 @@ package com.ozeratar.rentACar.webApi;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,12 +40,12 @@ public class BrandController {
 	}
 	
 	@PostMapping
-	public CreateBrandResponse add(@RequestBody CreateBrandRequest createBrandRequest) {
+	public CreateBrandResponse add(@Valid @RequestBody CreateBrandRequest createBrandRequest) {
 		return brandService.add(createBrandRequest);
 	}
 	
 	@PutMapping
-	public UpdateBrandResponse update(@RequestBody UpdateBrandRequest updateBrandRequest) {
+	public UpdateBrandResponse update(@Valid @RequestBody UpdateBrandRequest updateBrandRequest) {
 		return brandService.update(updateBrandRequest);
 	}
 	

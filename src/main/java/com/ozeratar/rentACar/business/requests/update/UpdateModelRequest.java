@@ -10,6 +10,4 @@ import lombok.NoArgsConstructor;
 public class UpdateModelRequest {
 	private int id;
 	private String name;
-
-
 }

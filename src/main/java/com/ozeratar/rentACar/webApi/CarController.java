@@ -34,7 +34,7 @@ public class CarController {
 	
 	@GetMapping("/{id}")
 	public GetCarResponse GetById(@PathVariable int id) {
-		return carService.GetById(id);
+		return carService.getById(id);
 	}
 	
 	@PostMapping

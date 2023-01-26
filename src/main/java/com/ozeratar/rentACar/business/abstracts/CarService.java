@@ -11,7 +11,7 @@ import com.ozeratar.rentACar.business.responses.update.UpdateCarResponse;
 
 public interface CarService {
 	List<GetAllCarsResponse> getAll();
-	GetCarResponse GetById(int id);
+	GetCarResponse getById(int id);
 	CreateCarResponse add(CreateCarRequest createCarRequest);
 	UpdateCarResponse update(UpdateCarRequest updateCarRequest);
 	void delete (int id);
